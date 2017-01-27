@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectGuid>{C115E216-9968-4A86-8634-D1E7F4890304}</ProjectGuid>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VSTS_MySQL_Toolkit_Win</RootNamespace>
+    <AssemblyName>VSTS-MySQL-Toolkit-Win</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CreateVsixFile.cmd" />
+    <None Include="gruntfile.js" />
+    <Content Include="images\taskcatalog.png" />
+    <Content Include="LICENSE" />
+    <None Include="package.json" />
+    <Content Include="_NOTES.txt" />
+    <Content Include="README.md" />
+    <Content Include="screenshots\screen03.png" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\Strings\resources.resjson\de-de\resources.resjson" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\Strings\resources.resjson\en-US\resources.resjson" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\Strings\resources.resjson\es-es\resources.resjson" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\Strings\resources.resjson\fr-fr\resources.resjson" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\Strings\resources.resjson\it-IT\resources.resjson" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\Strings\resources.resjson\ja-jp\resources.resjson" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\Strings\resources.resjson\ko-KR\resources.resjson" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\Strings\resources.resjson\ru-RU\resources.resjson" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\Strings\resources.resjson\zh-CN\resources.resjson" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\Strings\resources.resjson\zh-TW\resources.resjson" />
+    <Content Include="Tasks\RunMySqlCommand\RunMySqlCommand.ps1" />
+    <Content Include="Tasks\RunMySqlCommand\task.json" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\MySql\MySql.psm1" />
+    <Content Include="Tasks\RunMySqlScripts\icon.png" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\de-de\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\en-US\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\es-es\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\fr-fr\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\it-IT\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\ja-jp\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\ko-KR\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\ru-RU\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\zh-CN\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\zh-TW\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScript\icon.png" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\Strings\resources.resjson\de-de\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\Strings\resources.resjson\en-US\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\Strings\resources.resjson\es-es\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\Strings\resources.resjson\fr-fr\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\Strings\resources.resjson\it-IT\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\Strings\resources.resjson\ja-jp\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\Strings\resources.resjson\ko-KR\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\Strings\resources.resjson\ru-RU\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\Strings\resources.resjson\zh-CN\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\Strings\resources.resjson\zh-TW\resources.resjson" />
+    <Content Include="Tasks\RunMySqlScript\RunMySqlScript.ps1" />
+    <Content Include="Tasks\RunMySqlScript\task.json" />
+    <Content Include="Tasks\RunMySqlScripts\RunMySqlScripts.ps1" />
+    <Content Include="Tasks\RunMySqlScripts\task.json" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\FindFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\InputFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\LegacyFindFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\lib.json" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\LocalizationFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\LoggingCommandFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\LongPathFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\OutFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\ServerOMFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\ToolFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\TraceFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\VstsTaskSdk.psd1" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\VstsTaskSdk.psm1" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\MySql\MySql.psm1" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\FindFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\InputFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\LegacyFindFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\lib.json" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\LocalizationFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\LoggingCommandFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\LongPathFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\OutFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\ServerOMFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\ToolFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\TraceFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\VstsTaskSdk.psd1" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\VstsTaskSdk.psm1" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\MySql\MySql.psm1" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\FindFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\InputFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\LegacyFindFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\lib.json" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\LocalizationFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\LoggingCommandFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\LongPathFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\OutFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\ServerOMFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\ToolFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\TraceFunctions.ps1" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\VstsTaskSdk.psd1" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\VstsTaskSdk.psm1" />
+    <None Include="vss-extension.json" />
+    <None Include="images\logo.png" />
+    <None Include="settings.tfx.json" />
+    <None Include=".gitignore" />
+    <None Include=".tfignore" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vscode\tasks.json" />
+    <Content Include="Tasks\RunMySqlCommand\icon.png" />
+    <Content Include="screenshots\screen01.png" />
+    <Content Include="screenshots\screen02.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2329</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2329/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

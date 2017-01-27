@@ -1,0 +1,128 @@
+{
+  "manifestVersion": 1,
+  "id": "mysql-toolkit-win",
+  "version": "0.0.1",
+  "name": "MySQL Toolkit for Windows",
+  "scopes": [
+    "vso.build_execute",
+    "vso.release_execute"
+  ],
+  "description": "A collection of tasks to enable execution MySQL commands or scripts by Windows Agents (include Windows Hosted Agents).",
+  "baseUri": "http://Strefa.MS",
+  "publisher": "daporo",
+  "public": false,
+  "icons": {
+    "default": "images/logo.png"
+  },
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "tags": [
+    "MySQL",
+    "Utility taks",
+    "Tasks",
+    "Utility",
+    "Automation",
+    "Database",
+    "SQL"
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots/screen01.png"
+    },
+    {
+      "path": "screenshots/screen02.png"
+    },
+    {
+      "path": "screenshots/screen03.png"
+    }
+  ],
+  "content": {
+    "details": {
+      "path": "README.md"
+    },
+    "license": {
+      "path": "LICENSE"
+    }
+  },
+  "links": {
+    "home": {
+      "uri": "https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win"
+    },
+    "getstarted": {
+      "uri": "https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win/blob/master/README.md"
+    },
+    "learn": {
+      "uri": "https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win/blob/master/README.md"
+    },
+    "support": {
+      "uri": "mailto:Dariusz.Porowski@microsoft.com"
+    },
+    "repository": {
+      "uri": "https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win"
+    },
+    "issues": {
+      "uri": "https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win/issues"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win"
+  },
+  "branding": {
+    "color": "rgb(62,120,166)",
+    "theme": "dark"
+  },
+  "badges": [
+    {
+      "href": "https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win",
+      "uri": "https://daporo.visualstudio.com/_apis/public/build/definitions/167b9dbb-0b5a-4f10-b97e-e6d0624b19d9/41/badge",
+      "description": "CI build status"
+    }
+  ],
+  "files": [
+    {
+      "path": "Tasks"
+    }
+  ],
+  "categories": [
+    "Build and release"
+  ],
+  "contributions": [
+    {
+      "id": "run-mysql-command",
+      "description": "Allows you to run a MySQL command",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Tasks/RunMySqlCommand"
+      }
+    },
+    {
+      "id": "run-mysql-script",
+      "description": "Allows you to run a MySQL script",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Tasks/RunMySqlScript"
+      }
+    },
+    {
+      "id": "run-mysql-scripts",
+      "description": "Allows you to run MySQL scripts",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Tasks/RunMySqlScripts"
+      }
+    }
+  ]
+}

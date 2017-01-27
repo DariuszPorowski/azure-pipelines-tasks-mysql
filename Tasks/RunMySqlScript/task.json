@@ -1,0 +1,99 @@
+﻿{
+  "id": "56a2a841-3810-427a-a5a2-6392ae239f3c",
+  "name": "RunMySqlScript",
+  "friendlyName": "Run MySQL script",
+  "description": "Allows you to run a MySQL script",
+  "helpMarkDown": "[More Information](https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win/blob/master/README.md)",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "author": "Dariusz Porowski",
+  "version": {
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 1
+  },
+  "demands": [
+
+  ],
+  "minimumAgentVersion": "1.83.0",
+  "groups": [
+    {
+      "name": "advanced",
+      "displayName": "Advanced",
+      "isExpanded": true
+    }
+  ],
+  "inputs": [
+    {
+      "name": "serverHost",
+      "type": "string",
+      "label": "Server",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "MySQL server hostname, DNS name or IP address."
+    },
+    {
+      "name": "serverPort",
+      "type": "string",
+      "label": "Port",
+      "defaultValue": "3306",
+      "required": true,
+      "helpMarkDown": "MySQL server TCP port number."
+    },
+    {
+      "name": "serverUserName",
+      "type": "string",
+      "label": "Username",
+      "required": true,
+      "helpMarkDown": "UID for MySQL server connection."
+    },
+    {
+      "name": "serverPassword",
+      "type": "string",
+      "label": "Password",
+      "required": true,
+      "helpMarkDown": "PWD for MySQL server connection. You should use a secret variable here."
+    },
+    {
+      "name": "executeOnDbLvl",
+      "type": "boolean",
+      "label": "Execute on database level?",
+      "defaultValue": "true",
+      "helpMarkDown": "If checked, execution will be on database level instead on server level."
+    },
+    {
+      "name": "databaseName",
+      "type": "string",
+      "label": "Database",
+      "required": true,
+      "visibleRule": "executeOnDbLvl = true",
+      "helpMarkDown": "Database name."
+    },
+    {
+      "name": "mysqlScript",
+      "type": "filePath",
+      "label": "MySQL script",
+      "required": true,
+      "helpMarkDown": "Path to MySQL script file for execution."
+    },
+    {
+      "name": "connectionTimeout",
+      "type": "string",
+      "label": "Connection Timeout",
+      "defaultValue": "30",
+      "required": true,
+      "groupName": "advanced"
+    }
+  ],
+  "instanceNameFormat": "Run MySQL script on $(serverHost)",
+  "execution": {
+    "PowerShell3": {
+      "target": "$(currentDirectory)\\RunMySqlScript.ps1",
+      "argumentFormat": "",
+      "workingDirectory": "$(currentDirectory)"
+    }
+  }
+}
