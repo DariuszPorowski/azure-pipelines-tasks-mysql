@@ -1,7 +1,8 @@
 try {
     $ErrorActionPreference = "Stop";
+	cd $PSScriptRoot
 	Invoke-WebRequest -Uri https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -OutFile nuget.exe
-	.\nuget.exe install MySQL.Data -Version 6.9.9
+	.\nuget.exe install MySQL.Data -Version 6.9.9 -outputdirectory $PSScriptRoot
 	$mySQLDataDLL =  "$PSScriptRoot\MySql.Data.6.9.9\lib\net45\MySQL.Data.dll"
     #$mySQLDataDLL =  "$PSScriptRoot\MySQL.Data.dll"
     [void][System.Reflection.Assembly]::LoadFrom($mySQLDataDLL);
