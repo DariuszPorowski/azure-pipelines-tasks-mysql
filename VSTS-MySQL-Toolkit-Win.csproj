@@ -11,7 +11,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VSTS_MySQL_Toolkit_Win</RootNamespace>
     <AssemblyName>VSTS-MySQL-Toolkit-Win</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -19,6 +19,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,9 +48,10 @@
     <Content Include="images\taskcatalog.png" />
     <Content Include="LICENSE" />
     <None Include="package.json" />
-    <Content Include="_NOTES.txt" />
     <Content Include="README.md" />
     <Content Include="screenshots\screen03.png" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\MySql\MySql.Data-6.9.9.dll" />
+    <Content Include="Tasks\RunMySqlCommand\ps_modules\MySql\MySql.Data.dll" />
     <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\Strings\resources.resjson\de-de\resources.resjson" />
     <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\Strings\resources.resjson\en-US\resources.resjson" />
     <Content Include="Tasks\RunMySqlCommand\ps_modules\VstsTaskSdk\Strings\resources.resjson\es-es\resources.resjson" />
@@ -63,6 +66,8 @@
     <Content Include="Tasks\RunMySqlCommand\task.json" />
     <Content Include="Tasks\RunMySqlCommand\ps_modules\MySql\MySql.psm1" />
     <Content Include="Tasks\RunMySqlScripts\icon.png" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\MySql\MySql.Data-6.9.9.dll" />
+    <Content Include="Tasks\RunMySqlScripts\ps_modules\MySql\MySql.Data.dll" />
     <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\de-de\resources.resjson" />
     <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\en-US\resources.resjson" />
     <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\es-es\resources.resjson" />
@@ -74,6 +79,8 @@
     <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\zh-CN\resources.resjson" />
     <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\Strings\resources.resjson\zh-TW\resources.resjson" />
     <Content Include="Tasks\RunMySqlScript\icon.png" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\MySql\MySql.Data-6.9.9.dll" />
+    <Content Include="Tasks\RunMySqlScript\ps_modules\MySql\MySql.Data.dll" />
     <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\Strings\resources.resjson\de-de\resources.resjson" />
     <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\Strings\resources.resjson\en-US\resources.resjson" />
     <Content Include="Tasks\RunMySqlScript\ps_modules\VstsTaskSdk\Strings\resources.resjson\es-es\resources.resjson" />
@@ -129,20 +136,26 @@
     <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\TraceFunctions.ps1" />
     <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\VstsTaskSdk.psd1" />
     <Content Include="Tasks\RunMySqlScripts\ps_modules\VstsTaskSdk\VstsTaskSdk.psm1" />
+    <Content Include="ThirdPartyNotice.md" />
     <None Include="vss-extension.json" />
     <None Include="images\logo.png" />
-    <None Include="settings.tfx.json" />
     <None Include=".gitignore" />
     <None Include=".tfignore" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include=".vscode\tasks.json" />
     <Content Include="Tasks\RunMySqlCommand\icon.png" />
     <Content Include="screenshots\screen01.png" />
     <Content Include="screenshots\screen02.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>

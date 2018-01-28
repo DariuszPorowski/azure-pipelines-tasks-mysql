@@ -1,14 +1,14 @@
 {
   "manifestVersion": 1,
   "id": "mysql-toolkit-win",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "MySQL Toolkit for Windows",
   "scopes": [
     "vso.build_execute",
     "vso.release_execute"
   ],
   "description": "A collection of tasks to enable execution MySQL commands or scripts by Windows Agents (include Windows Hosted Agents).",
-  "baseUri": "http://Strefa.MS",
+  "baseUri": "http://DariuszPorowski.MS",
   "publisher": "daporo",
   "public": false,
   "icons": {

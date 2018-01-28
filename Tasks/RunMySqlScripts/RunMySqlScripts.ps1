@@ -2,7 +2,7 @@
 param()
 
 $ErrorActionPreference = 'Stop'
-Write-Host "Starting RunMySqlScripts"
+Write-Output "Starting RunMySqlScripts"
 Trace-VstsEnteringInvocation $MyInvocation
 
 try {
@@ -10,7 +10,7 @@ try {
 
 	[string]$serverHost = Get-VstsInput -Name serverHost -Require
 	[string]$serverPort = Get-VstsInput -Name serverPort -Require
-	[bool]$executeOnDbLvl = Get-VstsInput -Name executeOnDbLvl -AsBool 
+	[bool]$executeOnDbLvl = Get-VstsInput -Name executeOnDbLvl -AsBool
 	[string]$databaseName = Get-VstsInput -Name databaseName
 	[string]$connectionTimeout = Get-VstsInput -Name connectionTimeout
 	[string]$serverUserName = Get-VstsInput -Name serverUsername -Require
@@ -21,23 +21,23 @@ try {
 
 	if ($executeOnDbLvl) {
 		Connect-MySqlServer -Server $serverHost -Port $serverPort -Username $serverUserName -Password $serverPassword -Database $databaseName -Timeout $connectionTimeout
-		Write-Host "Running MySQL scripts on database: $databaseName"
+		Write-Output "Running MySQL scripts on database: $databaseName"
 	}
 	else {
 		Connect-MySqlServer -Server $serverHost -Port $serverPort -Username $serverUserName -Password $serverPassword -Timeout $connectionTimeout
-		Write-Host "Running MySQL scripts on server: $serverHost"
+		Write-Output "Running MySQL scripts on server: $serverHost"
 	}
 
 	foreach ($mysqlScript in Get-ChildItem -Path "$mysqlScripts" -Filter "*.sql" | Sort-Object)
 	{
-		Write-Host "Running script: $($mysqlScript.Name)"
+		Write-Output "Running script: $($mysqlScript.Name)"
 		$mysqlCommand = Get-Content -Path $mysqlScript.FullName -Raw
 		Invoke-MySqlQuery -Query $mysqlCommand -Verbose
 	}
 	
 	Disconnect-MySqlServer -Verbose
 
-	Write-Host "Finished"
+	Write-Output "Finished"
 }
 catch {
 	Write-Error "Error running MySQL scripts: $_"
@@ -46,4 +46,4 @@ finally {
 	Trace-VstsLeavingInvocation $MyInvocation
 }
 
-Write-Host "Ending RunMySqlScripts"
+Write-Output "Ending RunMySqlScripts"

@@ -2,7 +2,7 @@
 param()
 
 $ErrorActionPreference = 'Stop'
-Write-Host "Starting RunMySqlCommand"
+Write-Output "Starting RunMySqlCommand"
 Trace-VstsEnteringInvocation $MyInvocation
 
 try {
@@ -21,17 +21,17 @@ try {
 
 	if ($executeOnDbLvl) {
 		Connect-MySqlServer -Server $serverHost -Port $serverPort -Username $serverUserName -Password $serverPassword -Database $databaseName -Timeout $connectionTimeout
-		Write-Host "Running MySQL command on database: $databaseName"
+		Write-Output "Running MySQL command on database: $databaseName"
 	}
 	else {
 		Connect-MySqlServer -Server $serverHost -Port $serverPort -Username $serverUserName -Password $serverPassword -Timeout $connectionTimeout
-		Write-Host "Running MySQL command on server: $serverHost"
+		Write-Output "Running MySQL command on server: $serverHost"
 	}
 	
 	Invoke-MySqlQuery -Query $mysqlCommand -Verbose
 	Disconnect-MySqlServer -Verbose
 
-	Write-Host "Finished"
+	Write-Output "Finished"
 }
 catch {
 	Write-Error "Error running MySQL command: $_"
@@ -40,4 +40,4 @@ finally {
 	Trace-VstsLeavingInvocation $MyInvocation
 }
 
-Write-Host "Ending RunMySqlCommand"
+Write-Output "Ending RunMySqlCommand"
