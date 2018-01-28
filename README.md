@@ -1,4 +1,4 @@
-﻿![Icon](https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win/blob/master/images/logo.png)
+﻿![Icon](https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win/raw/master/images/logo.png)
 
 # MySQL Toolkit for Windows
 ![CI Status](https://daporo.visualstudio.com/_apis/public/build/definitions/167b9dbb-0b5a-4f10-b97e-e6d0624b19d9/41/badge)
@@ -18,7 +18,7 @@ This task will run a specified SQL script against your server or database.
 * **Run MySQL scripts**
 This task will run all of the SQL scripts in the specified folder against your server or database.
 
-![Task Catalog](https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win/blob/master/images/taskcatalog.png)
+![Task Catalog](https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win/raw/master/images/taskcatalog.png)
 
 **NOTE**
 > Each task can be executed on Server or Database level.
