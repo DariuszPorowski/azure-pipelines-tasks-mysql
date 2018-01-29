@@ -32,8 +32,8 @@ This task will run all of the SQL scripts in the specified folder against your s
 ## Release Note
 ### 0.0.2
 * Changed MySQL Client .NET library from **6.9.9** to **6.10.6**.
-* [ISSUE #2 - Error running MySQL script: Exception calling "Fill" with "1" argument(s): "Index was outside the bounds of the array."](https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win/issues/s) Added **AllowUserVariables=true;** to Connection String by default.
-* [ISSUE #1 - Eliminate Write-Host usage #1](https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win/issues/1) - Changed **Write-Host** to **Write-Output**.
+* [ISSUE #2 - Error running MySQL script: Exception calling "Fill" with "1" argument(s): "Index was outside the bounds of the array."](https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win/issues/2) Added **AllowUserVariables=true;** to Connection String by default.
+* [ISSUE #1 - Eliminate Write-Host usage](https://github.com/DariuszPorowski/VSTS-MySQL-Toolkit-Win/issues/1) - Changed **Write-Host** to **Write-Output**.
 * Fixed typos in README file.
 
 ### 0.0.1
