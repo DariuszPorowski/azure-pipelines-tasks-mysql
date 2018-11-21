@@ -88,18 +88,13 @@ Function Invoke-MySqlQuery {
 		try {
 			$ErrorActionPreference = "Stop";
 			Write-Verbose "Creating the Command object";
-			[MySql.Data.MySqlClient.MySqlCommand]$command = New-Object MySql.Data.MySqlClient.MySqlCommand;
+			[MySql.Data.MySqlClient.MySqlScript]$command = New-Object MySql.Data.MySqlClient.MySqlScript;
 			Write-Verbose "Assigning Connection object to Command object";
 			$command.Connection = $connection;
 			Write-Verbose "Assigning Query to Command object";
-			$command.CommandText = $Query;
+			$command.Query = $Query;
 			Write-Verbose $Query;
-			Write-Verbose "Creating DataAdapter with Command object";
-			[MySql.Data.MySqlClient.MySqlDataAdapter]$dataAdapter = New-Object MySql.Data.MySqlClient.MySqlDataAdapter($command);
-			Write-Verbose "Creating Dataset object to hold records";
-			[System.Data.DataSet]$dataSet = New-Object System.Data.DataSet;
-			Write-Verbose "Filling Dataset";
-			$recordCount = $dataAdapter.Fill($dataSet);
+			$recordCount = $command.Execute();
 			Write-Verbose "$($recordCount) records found";
 		}
 		catch {
@@ -109,7 +104,6 @@ Function Invoke-MySqlQuery {
 	}
 	End {
 		Write-Verbose "Returning Tables object of Dataset";
-		return $dataSet.Tables;
 	}
 }
 
